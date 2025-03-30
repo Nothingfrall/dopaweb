@@ -18,15 +18,9 @@ function registerUser(username, email, balance) {
     return user;
 }
 
-
-function getUser(username) {
-    return users.find(user => user.username === username);
-}
-
-
 function getUser(username) {
     return users.find(user => user.username === username);
 }
 
 // Example usage
-registerUser('User123', 'user@example.com', 100);
+// registerUser('User123', 'user@example.com', 100); // Uncomment to test
