@@ -1,0 +1,183 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Dopamine Cheats</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <style>
+        .scrollable {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .square-image {
+            width: 100%;
+            padding-top: 100%; /* 1:1 Aspect Ratio */
+            position: relative;
+        }
+        .square-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (!localStorage.getItem('loggedIn')) {
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <div class="container mx-auto p-4">
+        <div class="flex items-center justify-between mb-8">
+            <div class="flex flex-col items-start">
+                <div class="flex items-center mb-1">
+                    <img alt="Logo of Dopamine Cheats, a rounded logo with a stylized design" class="rounded-full mr-2" height="40" src="images/logo.jpg" width="40"/>
+                    <div class="flex items-center">
+                        <span class="text-lg font-bold mr-2">Dopamine.cheats</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a class="hover:text-blue-600 transition duration-300" href="https://telegram.org" target="_blank"></a>
+                <a class="hover:text-pink-600 transition duration-300" href="https://instagram.com" target="_blank">
+                    <i class="fab fa-instagram text-pink-500 text-xl"></i>
+                </a>
+                <a class="hover:text-green-600 transition duration-300" href="https://example.com/shop" target="_blank">
+                    <i class="fas fa-shopping-cart text-green-500 text-xl"></i>
+                </a>
+                <div class="flex items-center space-x-2">
+                    <div class="flex items-center bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-full px-3 py-1 relative">
+                        <div class="bg-blue-500 text-white rounded-full h-8 w-8 flex items-center justify-center absolute left-0 transform -translate-x-1/3">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <span class="ml-7">100</span>
+                    </div>
+                    <div class="relative">
+                        <a class="hover:text-gray-600 transition duration-300 cursor-pointer" id="profile-icon">
+                            <div class="rounded-full border-2 border-blue-500 p-0.5">
+                                <img alt="Profile icon, a rounded image placeholder for user profile" class="rounded-full" height="30" src="images/profile.jpg" width="30"/>
+                            </div>
+                        </a>
+                        <div class="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg py-2 hidden z-50" id="profile-menu">
+                            <a class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700" href="profile.html">Profile</a>
+                            <a class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700" href="settings.html">Settings</a>
+                            <a class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700" href="buy_balance.html">Buy Balance</a>
+                            <a class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700" href="#">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="md:col-span-1 p-6 rounded-lg shadow-lg relative">
+                <div class="bg-white dark:bg-gray-800 p-4 rounded-lg relative mb-4 shadow-md hover:shadow-lg transition duration-300">
+                    <div class="absolute top-2 right-2 flex space-x-1">
+                        <div class="h-2.5 w-2.5 bg-red-500 rounded-full"></div>
+                        <div class="h-2.5 w-2.5 bg-yellow-500 rounded-full"></div>
+                        <div class="h-2.5 w-2.5 bg-green-500 rounded-full"></div>
+                    </div>
+                    <h1 class="text-3xl font-bold text-blue-500">About Dopamine</h1>
+                    <p class="mt-2 mb-4 text-gray-700 dark:text-gray-300">Dopamine is a website for downloading modified applications that are very safe.</p>
+                    <a href="https://t.me/Dopaminech" target="_blank" class="bg-blue-500 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-600 transition duration-300 inline-flex items-center">
+                        <i class="fab fa-telegram-plane mr-2"></i> Join our Telegram Channel
+                    </a>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-4 rounded-lg relative shadow-md hover:shadow-lg transition duration-300">
+                    <div class="absolute top-2 right-2 flex space-x-1">
+                        <div class="h-2.5 w-2.5 bg-red-500 rounded-full"></div>
+                        <div class="h-2.5 w-2.5 bg-yellow-500 rounded-full"></div>
+                        <div class="h-2.5 w-2.5 bg-green-500 rounded-full"></div>
+                    </div>
+                    <h1 class="text-3xl font-bold text-blue-500">About</h1>
+                    <div class="mt-2 mb-4 text-gray-700 dark:text-gray-300">
+                        <div class="flex items-center mb-2">
+                            <i class="fab fa-telegram-plane mr-2 text-blue-500"></i>
+                            <span>Dopamine</span>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-envelope mr-2 text-blue-500"></i>
+                            <span>support@dopaminecheats.com</span>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <i class="fab fa-github mr-2 text-blue-500"></i>
+                            <span>github.com/powfvck</span>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-code mr-2 text-blue-500"></i>
+                            <span>Powfu.VM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-4 scrollable">
+                <div class="p-2 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex flex-col">
+                    <div class="square-image mb-2 rounded-lg overflow-hidden">
+                        <img alt="Screenshot of Modern Strike game showing intense FPS action" height="300" src="images/image1.jpg" width="300"/>
+                    </div>
+                    <div class="flex flex-col flex-grow">
+                        <p class="font-bold text-gray-900 dark:text-gray-100 bg-blue-100 dark:bg-blue-900 p-2 rounded text-center">Modern Strike</p>
+                        <p class="text-gray-800 dark:text-gray-300 mt-2">Online game FPS with Mod Menu</p>
+                        <p class="font-bold text-gray-900 dark:text-gray-100 mt-2">Feature:</p>
+                        <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mt-1">
+                            <li>Esp Player</li>
+                            <li>Aim Bot</li>
+                            <li>No Recoil</li>
+                        </ul>
+                        <a class="bg-blue-500 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-600 transition duration-300 mt-auto text-center" href="#">Download Here</a>
+                    </div>
+                </div>
+                <div class="p-2 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex flex-col">
+                    <div class="square-image mb-2 rounded-lg overflow-hidden">
+                        <img alt="Placeholder image for another game or app" height="300" src="images/image2.jpg" width="300"/>
+                    </div>
+                    <div class="flex flex-col flex-grow">
+                        <p class="font-bold text-gray-900 dark:text-gray-100 bg-blue-100 dark:bg-blue-900 p-2 rounded text-center">Dopamine Dump</p>
+                        <p class="text-gray-800 dark:text-gray-300 mt-2">Dumper tools all game unity.</p>
+                        <p class="font-bold text-gray-900 dark:text-gray-100 mt-2">Feature:</p>
+                        <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mt-1">
+                            <li>Dump Lib il2cpp</li>
+                            <li>Offset Dumper</li>
+                        </ul>
+                        <a class="bg-blue-500 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-600 transition duration-300 mt-auto text-center" href="#">Download Here</a>
+                    </div>
+                </div>
+                <div class="p-2 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex flex-col">
+                    <div class="square-image mb-2 rounded-lg overflow-hidden">
+                        <img alt="Placeholder image for another game or app" height="300" src="images/image3.jpg" width="300"/>
+                    </div>
+                    <div class="flex flex-col flex-grow">
+                        <p class="font-bold text-gray-900 dark:text-gray-100 bg-blue-100 dark:bg-blue-900 p-2 rounded text-center">Sausage Man</p>
+                        <p class="text-gray-800 dark:text-gray-300 mt-2">Online Game Battle Royale</p>
+                        <p class="font-bold text-gray-900 dark:text-gray-100 mt-2">Feature:</p>
+                        <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mt-1">
+                            <li>Esp Player</li>
+                            <li>AIM Bot</li>
+                            <li>Memory Feature</li>
+                        </ul>
+                        <a class="bg-blue-500 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-600 transition duration-300 mt-auto text-center" href="#">Download Here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="mt-8 text-center text-gray-600 dark:text-gray-400">
+            <div class="mb-4">
+                <a class="text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-500 transition duration-300" href="#">Privacy Policy</a> | 
+                <a class="text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-500 transition duration-300" href="#">Terms of Service</a> | 
+                <a class="text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-500 transition duration-300" href="#">Contact Us</a>
+            </div>
+            <div>© 2023 Developed by Powfu Haruchiyo</div>
+        </footer>
+    </div>
+</body>
+</html>

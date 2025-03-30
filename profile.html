@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Dopamine Cheats</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="users.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const username = 'User123'; // Replace with dynamic username
+            const user = getUser(username);
+            if (user) {
+                document.getElementById('username').textContent = user.username;
+                document.getElementById('email').textContent = user.email;
+                document.getElementById('balance').textContent = user.balance;
+            }
+        });
+    </script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-96">
+        <h2 class="text-2xl font-bold mb-6 text-center">User Profile</h2>
+        <div class="mb-4">
+            <label class="block text-gray-700">Username:</label>
+            <p id="username" class="border rounded w-full py-2 px-3"></p>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700">Email:</label>
+            <p id="email" class="border rounded w-full py-2 px-3"></p>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700">Balance:</label>
+            <p id="balance" class="border rounded w-full py-2 px-3"></p>
+        </div>
+        <a href="settings.html" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Edit Profile</a>
+        <a href="index.html" class="mt-4 inline-block text-center text-blue-500">Back to Home</a>
+    </div>
+</body>
+</html>

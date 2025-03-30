@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Dopamine Cheats</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-96">
+        <h2 class="text-2xl font-bold mb-6 text-center">Login</h2>
+        <form>
+            <div class="mb-4">
+                <label for="username" class="block text-gray-700">Username</label>
+                <input type="text" id="username" class="border rounded w-full py-2 px-3" placeholder="Enter Username">
+            </div>
+            <div class="mb-4">
+                <label for="password" class="block text-gray-700">Password</label>
+                <input type="password" id="password" class="border rounded w-full py-2 px-3" placeholder="Enter Password">
+            </div>
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Login</button>
+        </form>
+        <a href="index.html" class="mt-4 inline-block text-center text-blue-500">Back to Home</a>
+    </div>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Simulate login
+            if (username === 'User123' && password === 'password') {
+                localStorage.setItem('loggedIn', 'true');
+                window.location.href = 'index.html';
+            } else {
+                alert('Invalid credentials');
+            }
+        });
+    </script>
+</body>
+</html>
